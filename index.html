@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lakshya - Portfolio</title>
+  <link rel="icon" type="image/x-icon" href="personal_logo_black.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="index.css">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <!-- Mobile Menu Button -->
+  <div class="mobile-menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row min-vh-60">
+      
+      <!-- Left Section -->
+      <div class="col-md-6 left-section">
+        <div class="display-1">Lakshya</div>
+        <div class="mobile-menu-content">
+          <p class="lead">IIT Ropar graduate with a passion for data science, business and building useful products that people love.</p>
+          <!-- Navigation -->
+          <div class="nav">
+            <a class="nav-link active" href="index.html">Home</a>
+            <a class="nav-link" href="resume.html">Resume</a>
+            <a class="nav-link" href="projects.html">Projects</a>
+            <a class="nav-link" href="contact.html">Contact</a>
+          </div>
+          <!-- Social Links -->
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/lakshya-sharma-528002206/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Lakshya-Sharma1292" target="_blank"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Right Section -->
+      <div class="col-md-6 right-section">
+        <div class="right-content">
+          <h2 class="display-4">Building products<br>that stand out</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills Section -->
+    <div class="row skills-section">
+      <div class="col-12">
+        <h2 class="text-center">Looking for a specific skill?</h2>
+        <div class="skill-buttons">
+          <button class="btn btn-outline-dark">Design</button>
+          <button class="btn btn-outline-dark">Data</button>
+          <button class="btn btn-outline-dark">Development</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="row cta-section">
+      <div class="col-lg-12 text-center">
+        <p class="lead">Interested in working with me?</p>
+        <div class="cta-buttons">
+          <a href="resume.html" class="btn btn-dark">View Resume</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Script -->
+  <script>
+    document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+      this.classList.toggle('active');
+      document.querySelector('.left-section').classList.toggle('active');
+    });
+  </script>
+</body>
+
+</html>
