@@ -66,6 +66,20 @@ body {
   transition: all 0.3s ease;
   position: relative;
   border-radius: 4px;
+  overflow: hidden;
+}
+
+.nav-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(51, 51, 51, 0.05);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  z-index: -1;
 }
 
 .nav-link::after {
@@ -82,16 +96,23 @@ body {
 
 .nav-link:hover {
   color: var(--text-color);
-  background-color: rgba(51, 51, 51, 0.05);
+  font-weight: bold;
+}
+
+.nav-link:hover::before {
+  transform: translateY(0);
 }
 
 .nav-link:hover::after {
   width: 80%;
+  font-weight: bold;
 }
 
 .nav-link.active {
   color: var(--text-color);
-  font-weight: 600;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
 }
 
 .nav-link.active::after {
@@ -258,12 +279,30 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     border-radius: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--text-color);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
 }
 
 .download-btn:hover {
-    background-color: var(--text-color);
     color: var(--white);
     border-color: var(--text-color);
+}
+
+.download-btn:hover::before {
+    transform: translateX(0);
 }
 
 /* Mobile Menu Button */
@@ -302,8 +341,7 @@ body {
 
     .nav {
         margin-top: 1rem;
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
         gap: 0.5rem;
         align-items: center;
         width: 100%;
@@ -313,18 +351,22 @@ body {
     .nav-link {
         padding: 0.75rem 1.5rem;
         font-size: 1.1rem;
-        /* width: 100%; */
+        width: 100%;
         text-align: center;
         border-radius: 4px;
-        
     }
 
-    .nav-link:hover {
-        background-color: rgba(51, 51, 51, 0.05);
+    .nav-link:hover::before {
+        transform: translateY(0);
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
     }
 
     .nav-link.active {
-        font-weight: 600;
+        font-weight: bold;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
     }
 
     .right-section {
